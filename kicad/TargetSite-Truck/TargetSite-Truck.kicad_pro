@@ -411,7 +411,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "TargetSite-Truck.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
