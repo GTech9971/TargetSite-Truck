@@ -25,6 +25,18 @@
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "55 /Users/george/Documents/GitHub/TargetSite-Truck/TargetSite-Truck.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"3 /Users/george/Documents/GitHub/TargetSite-Truck/TargetSite-Truck.X/TA7291.c
+[v _set_input1_pin_low set_input1_pin_low `(v  1 s 1 set_input1_pin_low ]
+"6
+[v _set_input1_pin_high set_input1_pin_high `(v  1 s 1 set_input1_pin_high ]
+"10
+[v _set_input2_pin_low set_input2_pin_low `(v  1 s 1 set_input2_pin_low ]
+"13
+[v _set_input2_pin_high set_input2_pin_high `(v  1 s 1 set_input2_pin_high ]
+"39
+[v _set_speed set_speed `(v  1 e 1 0 ]
+"50
+[v _pwm_load_duty_value pwm_load_duty_value `(v  1 s 1 pwm_load_duty_value ]
 [s S100 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -130,6 +142,10 @@
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
 "3516
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"5577
+[v _CCPR3L CCPR3L `VEuc  1 e 1 @785 ]
+"5617
+[v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
 "7280
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "7613

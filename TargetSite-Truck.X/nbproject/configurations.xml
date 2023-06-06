@@ -11,6 +11,10 @@
         <itemPath>mcc_generated_files/mcc.h</itemPath>
         <itemPath>mcc_generated_files/device_config.h</itemPath>
       </logicalFolder>
+      <itemPath>TruckCommand.h</itemPath>
+      <itemPath>TA7291P.h</itemPath>
+      <itemPath>Led.h</itemPath>
+      <itemPath>Truck.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -27,6 +31,9 @@
         <itemPath>mcc_generated_files/device_config.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>TA7291.c</itemPath>
+      <itemPath>HM-10.c</itemPath>
+      <itemPath>Led.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -34,6 +41,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>TargetSite-Truck.mc3</itemPath>
     </logicalFolder>
+    <itemPath>HM-10.h</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -87,7 +95,7 @@
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="true"/>
         <property key="extra-include-directories"
-                  value="../../../../Applications/microchip/xc8/v2.41/pic/include/proc"/>
+                  value="../../../../Applications/microchip/xc8/v2.41/pic/include/proc;../../../../../../Applications/microchip/xc8/v2.41/pic/include/proc"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>

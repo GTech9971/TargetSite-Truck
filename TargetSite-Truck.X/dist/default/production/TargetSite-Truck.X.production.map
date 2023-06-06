@@ -6,10 +6,10 @@ Linker command line:
   --edf=/Users/george/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.4.213/xc8/pic/dat/20230328142712_en.msgs \
   -cn -h+dist/default/production/TargetSite-Truck.X.production.sym \
   --cmf=dist/default/production/TargetSite-Truck.X.production.cmf -z \
-  -Q16F1827 -o/tmp/xcDDHkqoh/driver_tmp_3.o --defsym=__MPLAB_BUILD=1 \
+  -Q16F1827 -o/tmp/xc46dHOnO/driver_tmp_3.o --defsym=__MPLAB_BUILD=1 \
   --fixupoverflow=error \
   -Mdist/default/production/TargetSite-Truck.X.production.map \
-  --md=/tmp/xcDDHkqoh/driver_tmp_0.dat -E1 -ver=XC8 Compiler --acfsm=1493 \
+  --md=/tmp/xc46dHOnO/driver_tmp_0.dat -E1 -ver=XC8 Compiler --acfsm=1493 \
   -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 \
   -ACONST=00h-0FFhx16 -AENTRY=00h-0FFhx16 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -30,7 +30,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k /tmp/xcDDHkqoh/driver_tmp_15.o \
+  -pcinit=CODE -pfunctab=ENTRY -k /tmp/xc46dHOnO/driver_tmp_15.o \
   dist/default/production/TargetSite-Truck.X.production.o 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16F1827
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcDDHkqoh/driver_tmp_15.o
+/tmp/xc46dHOnO/driver_tmp_15.o
                 end_init                             30       30        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -307,6 +307,8 @@ _APFCON0                        (abs)        0011D
 _APFCON1                        (abs)        0011E
 _BAUDCON                        (abs)        0019F
 _BORCON                         (abs)        00116
+_CCP3CON                        (abs)        00313
+_CCPR3L                         (abs)        00311
 _GIE                            (abs)        0005F
 _LATA                           (abs)        0010C
 _LATB                           (abs)        0010D

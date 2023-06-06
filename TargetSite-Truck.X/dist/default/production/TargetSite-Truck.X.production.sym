@@ -46,6 +46,7 @@ __Leeprom_data 0 0 EEDATA 3
 _PIR1bits 11 0 ABS 0
 ___int_sp 0 0 STACK 2
 _ANSELA 18C 0 ABS 0
+_CCPR3L 311 0 ABS 0
 _ANSELB 18D 0 ABS 0
 _OSCCON 99 0 ABS 0
 __Habs1 0 0 ABS 0
@@ -138,6 +139,7 @@ __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
 _SYSTEM_Initialize 64 0 CODE 0
 _OSCTUNE 98 0 ABS 0
+_CCP3CON 313 0 ABS 0
 __Hbank0 0 0 ABS 0
 __Lbank0 0 0 ABS 0
 _BAUDCON 19F 0 ABS 0
@@ -268,14 +270,14 @@ intentry 8 103 CODE 8 0
 cstackCOMMON 70 72 COMMON 70 1
 %locals
 dist/default/production/TargetSite-Truck.X.production.o
-/tmp/xcDDHkqoh/driver_tmp_1.s
-1448 32 0 CODE 0
-1451 32 0 CODE 0
-1463 32 0 CODE 0
-1469 33 0 CODE 0
-1471 33 0 CODE 0
-1472 34 0 CODE 0
-1473 35 0 CODE 0
+/tmp/xc46dHOnO/driver_tmp_1.s
+1768 32 0 CODE 0
+1771 32 0 CODE 0
+1783 32 0 CODE 0
+1789 33 0 CODE 0
+1791 33 0 CODE 0
+1792 34 0 CODE 0
+1793 35 0 CODE 0
 main.c
 9 37 0 CODE 0
 12 37 0 CODE 0
