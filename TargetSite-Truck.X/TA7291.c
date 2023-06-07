@@ -1,4 +1,4 @@
-#include "./TA7291P.h";
+#include "TA7291P.h";
 
 static void set_input1_pin_low(TA7291P *p){
     LATA &= ~p->input1_pin;

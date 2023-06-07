@@ -1,9 +1,11 @@
+#pragma once
+
 #include <xc.h>
 
 /**
  * モーターへのコマンド
  */
-enum command{
+enum Command{
     /** 停止 */
     STOP,
     /** 前進 */
@@ -17,7 +19,7 @@ enum command{
 /**
  * スピードの調整モード
  */
-enum speed_mode{
+enum SpeedMode{
     /** 徐々に増加 */
     INC,
     /** 徐々に減少 */
@@ -31,9 +33,9 @@ enum speed_mode{
  */
 typedef struct{
     /** コマンド */
-    command cmd;
+    Command cmd;
     /** スピードの調整 */
-    speed_mode speed_mode;
+    SpeedMode speedMode;
     /** スピード(0~10) */
     uint8_t speed;
 } TruckCommand;
@@ -43,7 +45,7 @@ typedef struct{
  * @param p
  * @return 
  */
-static uint16_t calc_speed(uint8_t input) {
+uint16_t calc_speed(const uint8_t input) {
     // 入力値の範囲を0〜1に正規化
     float normalizedInput = (float)(input - 0) / (float)(10 - 0);
   
@@ -58,10 +60,4 @@ static uint16_t calc_speed(uint8_t input) {
  * @param data 受信データ
  * @return コマンド
  */
-TruckCommand create_command(uint8_t data);
-
-/**
- * コマンドを実行する
- * @param p
- */
-void execute_command(TruckCommand *p);
+void create_command(const uint8_t data, TruckCommand *command);

@@ -3,7 +3,9 @@
 #include "./HM-10.h"
 #include "./Led.h"
 #include "TruckCommand.h"
+#include "Truck.h"
 
+Truck truck;
 
 void main(void)
 {
@@ -19,6 +21,10 @@ void main(void)
     
     initialize_hm10();
     
+    /** input1, input2, vrefpin, speed */
+    TA7291P driver = {0x01, 0x00, 0x03, 0x00};
+    //トラック初期化
+    truck = {&driver, &led};
    
     while (1)
     {
@@ -40,8 +46,8 @@ void __interrupt() isr(void){
         }else{
             //not error           
             uint8_t data = RCREG;
-            TruckCommand truck_cmd = create_command(data);
-            execute_command(&truck_cmd);
+            TruckCommand truck_cmd = {Command.STOP, SpeedMode.NONE, 0};
+            create_command(data, &truck_cmd);
         }
     }
 }

@@ -1,3 +1,5 @@
+#pragma once
+
 #define BLINK_COUNT 10
 
 /**

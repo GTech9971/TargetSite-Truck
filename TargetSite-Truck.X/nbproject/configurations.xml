@@ -34,6 +34,8 @@
       <itemPath>TA7291.c</itemPath>
       <itemPath>HM-10.c</itemPath>
       <itemPath>Led.c</itemPath>
+      <itemPath>Truck.c</itemPath>
+      <itemPath>TruckCommand.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
