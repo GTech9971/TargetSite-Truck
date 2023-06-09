@@ -33,9 +33,9 @@ enum SpeedMode{
  */
 typedef struct{
     /** コマンド */
-    Command cmd;
+    enum Command cmd;
     /** スピードの調整 */
-    SpeedMode speedMode;
+    enum SpeedMode speedMode;
     /** スピード(0~10) */
     uint8_t speed;
 } TruckCommand;
@@ -45,15 +45,7 @@ typedef struct{
  * @param p
  * @return 
  */
-uint16_t calc_speed(const uint8_t input) {
-    // 入力値の範囲を0〜1に正規化
-    float normalizedInput = (float)(input - 0) / (float)(10 - 0);
-  
-    // 0〜1の範囲をoutputMin〜outputMaxの範囲に変換
-    uint16_t mappedValue = (uint16_t)(normalizedInput * (1023 - 0) + 0);
-  
-    return mappedValue;
-}
+uint16_t calc_speed(const uint8_t input);
 
 /**
  * 受信データからコマンドを生成する

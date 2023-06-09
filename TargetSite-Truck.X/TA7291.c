@@ -1,4 +1,4 @@
-#include "TA7291P.h";
+#include "TA7291P.h"
 
 static void set_input1_pin_low(TA7291P *p){
     LATA &= ~p->input1_pin;
@@ -37,10 +37,8 @@ void initialize(TA7291P *p){
  * @param speed
  */
 void set_speed(TA7291P *p, uint16_t speed){
-    if(speed >= 0 && speed <= 1023){
-        p->speed = speed;
-        pwm_load_duty_value(p->speed);
-    }
+    p->speed = speed;
+    pwm_load_duty_value(p->speed);    
 }
 
 /**

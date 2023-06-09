@@ -9,6 +9,8 @@
 #include <xc.h>
 #include "./Led.h"
 
+#define _XTAL_FREQ 8000000
+
 void initialize_led(Led *p){
     TRISB &= ~p->activate_pin;
     TRISB &= ~p->status_pin;
@@ -36,12 +38,12 @@ void low_activate_led(Led *p){
  * @param p
  * @param interval 点滅の間隔
  */
-void blink_activate_led(Led *p, uint8_t interval){
+void blink_activate_led(Led *p){
     for(uint8_t i = 0; i < BLINK_COUNT; i++){
         high_activate_led(p);        
-        __delay_ms(interval);
+        __delay_ms(BLINK_INTERVAL_MS);
         low_activate_led(p);
-        __delay_ms(interval);
+        __delay_ms(BLINK_INTERVAL_MS);
     }
 }
 /**
@@ -63,11 +65,11 @@ void low_status_led(Led *p){
  * @param p
  * @param interval 点灯の間隔
  */
-void blink_status_led(Led *p, uint8_t interval){
+void blink_status_led(Led *p){
     for(uint8_t i = 0; i < BLINK_COUNT; i++){
         high_status_led(p);        
-        __delay_ms(interval);
+        __delay_ms(BLINK_INTERVAL_MS);
         low_status_led(p);
-        __delay_ms(interval);
+        __delay_ms(BLINK_INTERVAL_MS);
     }
 }

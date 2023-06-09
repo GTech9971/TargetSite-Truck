@@ -19,19 +19,19 @@ void execute_command(Truck *p, const TruckCommand *command){
     uint16_t speed = calc_speed(command->speed);
     
     switch(command->cmd){
-        case Command.STOP:{
+        case STOP:{
             stop(p->driver);
             break;
-        }case Command.FORWARD:{
+        }case FORWARD:{
             forward(p->driver, speed);
             break;
-        }case Command.BACK:{
+        }case BACK:{
             back(p->driver, speed);
             break;
-        }case Command.BRAKE:{
+        }case BRAKE:{
             brake(p->driver);
             break;
-        }case Command.STOP:{
+        }default:{
             stop(p->driver);
             break;
         }

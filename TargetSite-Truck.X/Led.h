@@ -1,6 +1,7 @@
 #pragma once
 
 #define BLINK_COUNT 10
+#define BLINK_INTERVAL_MS 100
 
 /**
  * LEDのピン情報
@@ -30,7 +31,7 @@ void low_activate_led(Led *p);
  * @param p
  * @param interval 点滅の間隔
  */
-void blink_activate_led(Led *p, uint8_t interval);
+void blink_activate_led(Led *p);
 
 /**
  * ステータスLEDを光らす
@@ -47,4 +48,4 @@ void low_status_led(Led *p);
  * @param p
  * @param interval 点灯の間隔
  */
-void blink_status_led(Led *p, uint8_t interval);
+void blink_status_led(Led *p);
