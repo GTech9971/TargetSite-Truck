@@ -20,10 +20,13 @@ void main(void)
     //起動用LED点灯
     blink_activate_led(&led);
     
+    //ステータス用LED点灯
+    blink_status_led(&led);
+    
     initialize_hm10();
     
     /** input1, input2, vrefpin, speed */
-    TA7291P driver = {0x01, 0x00, 0x03, 0x00};
+    TA7291P driver = {0x01, 0x02, 0x08, 0x00};
     initialize(&driver);
     
     //トラック初期化

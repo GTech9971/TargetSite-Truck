@@ -29,6 +29,27 @@ void initialize(TA7291P *p){
     
     //vrefピンのアナログ設定(analog:1, digital:0)
     ANSELA |= p->vref_pin;
+    
+    //PWM初期化
+    // CCP3M PWM; DC3B 3; 
+	CCP3CON = 0x3C;    
+	// CCPR3L 127; 
+	CCPR3L = 0x7F;    
+	// CCPR3H 0; 
+	CCPR3H = 0x00;    
+	// Selecting Timer 2
+	CCPTMRS0bits.C3TSEL = 0x0;
+    
+    //Timer2 初期化
+    // PR2 255; 
+    PR2 = 0xFF;
+    // TMR2 0; 
+    TMR2 = 0x00;
+    // Clearing IF flag.
+    PIR1bits.TMR2IF = 0;
+    // T2CKPS 1:1; T2OUTPS 1:1; TMR2ON on; 
+    T2CON = 0x04;
+    
 }
 
 /**
