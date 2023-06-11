@@ -50,6 +50,7 @@ void initialize(TA7291P *p){
     // T2CKPS 1:1; T2OUTPS 1:1; TMR2ON on; 
     T2CON = 0x04;
     
+    stop(p);
 }
 
 /**

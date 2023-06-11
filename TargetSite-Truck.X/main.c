@@ -11,9 +11,9 @@ bool status_led_flag = false;
 void main(void)
 {
     // initialize the device
-    SYSTEM_Initialize();
-    ANSELA = 0x0;    
-    ANSELB = 0x0;
+    SYSTEM_Initialize();    
+    
+    initialize_hm10();
         
     Led led = {0x80, 0x40};
     initialize_led(&led);
@@ -23,18 +23,39 @@ void main(void)
     //ステータス用LED点灯
     blink_status_led(&led);
     
-    initialize_hm10();
     
     /** input1, input2, vrefpin, speed */
     TA7291P driver = {0x01, 0x02, 0x08, 0x00};
     initialize(&driver);
     
+    
+    
     //トラック初期化
-    truck.driver = &driver;
-    truck.led = &led;
+//    truck.driver = &driver;
+//    truck.led = &led;
    
+    uint16_t count = 0;
+
+    //pwmの値が低いとモーターが動かないある程度の値は必要
     while (1)
     {
+        //forward(&driver, 1000);
+        if(count == 1023){
+            count = 0;            
+            __delay_ms(1000);            
+        }
+        
+        back(&driver, count);        
+        
+                
+        __delay_ms(10);
+        
+        count++;
+    }
+    
+//    while (1)
+//    {
+//        forward(&driver, 1000);
         // DEBUG
 //        if(status_led_flag == false){
 //            high_status_led(truck.led);
@@ -48,7 +69,7 @@ void main(void)
 //        create_command(data, &truck_cmd);
 //            
 //        execute_command(&truck, &truck_cmd);
-    }
+    //}
 }
 
 /**
