@@ -1160,7 +1160,7 @@
     (property "Value" "Motor_DC" (id 1) (at 76.2 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal" (id 2) (at 72.39 36.576 0)
+    (property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type073_RT02602HBLU_1x02_P5.08mm_Horizontal" (id 2) (at 72.39 36.576 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 72.39 36.576 0)
@@ -1719,7 +1719,7 @@
       (reference "J2") (unit 1) (value "HM10") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal")
     )
     (path "/3839f658-e961-4379-aca0-577d55fa1a30"
-      (reference "M1") (unit 1) (value "Motor_DC") (footprint "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal")
+      (reference "M1") (unit 1) (value "Motor_DC") (footprint "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type073_RT02602HBLU_1x02_P5.08mm_Horizontal")
     )
     (path "/edf7ea70-fb34-43d6-8502-d59a0f625635"
       (reference "R1") (unit 1) (value "R330") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical")
