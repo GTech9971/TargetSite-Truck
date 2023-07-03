@@ -45,7 +45,7 @@ void main(void)
             __delay_ms(1000);            
         }
         
-        back(&driver, count);        
+        forward(&driver, count);        
         
                 
         __delay_ms(10);
